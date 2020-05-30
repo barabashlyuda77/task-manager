@@ -1,0 +1,14 @@
+.item-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+
+  .text {
+    font-size: 18px;
+  }
+
+  .text-checked {
+    text-decoration: line-through;
+    color: #cdcdcd;
+  }
+}

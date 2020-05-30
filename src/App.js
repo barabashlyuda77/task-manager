@@ -1,10 +1,13 @@
 import React from 'react';
+
+import ManagerWrapper from './components/ManagerWrapper';
+
 import './App.scss';
 
 const App = () => {
   return (
     <div className="wrapper">
-      <div>task manager wrapper</div>
+      <ManagerWrapper />
     </div>
   );
 }
