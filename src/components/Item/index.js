@@ -12,7 +12,7 @@ const Item = ({ text, checked = false }) => {
 
   return (
     <div className="item-wrapper">
-      <Checkbox checked />
+      <Checkbox checked={checked} />
       <div className={textClassName}>{text}</div>
     </div>
   );

@@ -11,15 +11,9 @@
     border-radius: 9px;
   }
 
-  .checkmark-unactive {
-    visibility: hidden;
-  }
-
-  .checkmark-active {
-    visibility: visible;
+  .checkmark {
     height: 35px;
     position: absolute;
     bottom: 1px;
   }
-
 }
