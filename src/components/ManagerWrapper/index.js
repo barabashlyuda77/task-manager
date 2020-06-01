@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ListWrapper from '../ListWrapper';
+import AddItem from '../AddItem';
 import './ManagerWrapper.scss';
 
 const ManagerWrapper = () => {
@@ -8,7 +9,7 @@ const ManagerWrapper = () => {
     <div className="manager-wrapper">
       <div>header</div>
       <ListWrapper />
-      <div>add item functionality</div>
+      <AddItem />
     </div>
   );
 }
