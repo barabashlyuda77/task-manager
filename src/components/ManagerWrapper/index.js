@@ -2,12 +2,13 @@ import React from 'react';
 
 import ListWrapper from '../ListWrapper';
 import AddItem from '../AddItem';
+import TaskHeader from '../TaskHeader';
 import './ManagerWrapper.scss';
 
 const ManagerWrapper = () => {
   return (
     <div className="manager-wrapper">
-      <div>header</div>
+      <TaskHeader />
       <ListWrapper />
       <AddItem />
     </div>

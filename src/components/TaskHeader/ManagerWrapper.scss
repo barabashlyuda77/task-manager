@@ -1,0 +1,37 @@
+.header-wrapper {
+  display: flex;
+  justify-content: space-around;
+
+  .checklist-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    border-top-left-radius: 8px;
+    cursor: pointer;
+
+    .checklist {
+      height: 50px;
+    }
+  }
+
+  .done-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #ECF0F1;
+    padding: 10px 0;
+    border-top-right-radius: 8px;
+    cursor: pointer;
+    border-bottom: 2px solid #dde4e6;
+    border-left: 2px solid #dde4e6;
+
+    &:hover {
+      background-color: #dde4e6;
+    }
+
+    .checkmark-done {
+      height: 50px;
+    }
+  }
+}
