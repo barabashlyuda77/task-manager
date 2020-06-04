@@ -1,31 +1,21 @@
 import React from 'react';
+import { useSelector } from 'react-redux'
 
 import Item from '../Item';
 import './ListWrapper.scss';
 
-const itemsList = [
-  {
-    text: "Go shopping",
-    checked: false,
-  },
-  {
-    text: "Dancing",
-    checked: false,
-  },
-  {
-    text: "Have lunch",
-    checked: false,
-  },
-  {
-    text: "Clean the room",
-    checked: true,
-  }
-];
-
 const ListWrapper = () => {
+  const itemsList = useSelector(state => state);
+
   return (
     <div className="list-wrapper">
-      {itemsList.map(item => <Item text={item.text} checked={item.checked}/>)}
+      {itemsList.length === 0 ? (
+        <div className="completed-task">
+          <img alt="Completed" src="completed-task.png"/>
+        </div>
+      ) : (
+        itemsList.map(item => <Item text={item.text} checked={item.checked} key={item.id}/>)
+      )}
     </div>
   );
 }

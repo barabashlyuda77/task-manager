@@ -1,5 +1,7 @@
 import { ADD_ITEM} from '../actions/index.js';
 
+const initialState = [];
+
 const createItem = (value) => {
   return {
     id: Date.now(),
@@ -8,27 +10,10 @@ const createItem = (value) => {
   };
 }
 
-const saveItemsToLocalStorage = (items) => {
-  localStorage.setItem('items', JSON.stringify(items));
-}
-
-const getItemsFromLocalStorage = () => {
-  const localStorageItems = localStorage.getItem('items');
-  return localStorageItems === null ? [] : JSON.parse(localStorageItems);
-}
-
-const addNewItem = (state, action) => {
-  const newState = [...state, createItem(action.text)]
-  saveItemsToLocalStorage(newState);
-  return newState;
-}
-
-const initialState = getItemsFromLocalStorage();
-
 const globalReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_ITEM:
-      return addNewItem(state, action);
+      return [...state, createItem(action.text)];
     default:
       return state
   }
