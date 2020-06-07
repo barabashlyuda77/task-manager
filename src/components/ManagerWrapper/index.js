@@ -5,6 +5,8 @@ import AddItem from '../AddItem';
 import TaskHeader from '../TaskHeader';
 import './ManagerWrapper.scss';
 
+// checkedOnly
+
 const ManagerWrapper = () => {
   return (
     <div className="manager-wrapper">
