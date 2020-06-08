@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './ManagerWrapper.scss';
+import './TabHeader.scss';
 
-const TaskHeader = () => {
+const TabHeader = () => {
   return (
     <div className="header-wrapper">
       <div className="checklist-wrapper">
@@ -15,4 +15,4 @@ const TaskHeader = () => {
   );
 }
 
-export default TaskHeader;
+export default TabHeader;
