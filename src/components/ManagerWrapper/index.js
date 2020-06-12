@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import ListWrapper from '../ListWrapper';
 import AddItem from '../AddItem';
@@ -8,10 +8,12 @@ import Tabs from '../Tabs';
 import Tab from '../Tab';
 
 const ManagerWrapper = () => {
+  const [activeTab, setActiveTab] = useState(0);
+
   return (
       <Tabs>
-        <TabHeader activeTab={0} />
-        <TabContent activeTab={0} >
+        <TabHeader activeTab={activeTab} setActiveTab={setActiveTab}/>
+        <TabContent activeTab={activeTab} >
           <Tab>
             <ListWrapper />
             <AddItem />
