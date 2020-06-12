@@ -2,7 +2,7 @@ import React from 'react';
 
 import ListWrapper from '../ListWrapper';
 import AddItem from '../AddItem';
-import TabHeader from '../TaskHeader';
+import TabHeader from '../TabHeader';
 import TabContent from '../TabContent';
 import Tabs from '../Tabs';
 import Tab from '../Tab';
