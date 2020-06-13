@@ -19,11 +19,10 @@ const AddItem = () => {
       <div className="circle" onClick={() => setChecked(true)}>
         <img alt="Plus" src="plus.png" className="plus-mark"/>
       </div>
-      <Modal
-        isOpen={checked}
+      {checked && <Modal
         onClose={() => setChecked(false)}
         onSave={addNewItem}
-      />
+      />}
     </div>
   );
 }
